@@ -1,0 +1,98 @@
+{% load static i18n %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <!-- Spinner Start -->
+        <div id="spinner" class="show position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-grow text-primary" role="status"></div>
+        </div>
+        <!-- Spinner End -->
+
+        <!-- Topbar Start -->
+        <div class="container-fluid bg-dark py-2 d-none d-md-flex">
+            <div class="container">
+                <div class="d-flex justify-content-between topbar">
+                    <div class="top-info">
+                        <small class="me-3 text-white-50"><a href="#"><i class="fas fa-map-marker-alt me-2 text-secondary"></i></a>23 RVA Street, Kolwezi</small>
+                        <small class="me-3 text-white-50"><a href="#"><i class="fas fa-envelope me-2 text-secondary"></i></a>Email@Example.com</small>
+                    </div>
+                    <div id="note" class="text-secondary d-none d-xl-flex"><small>{% trans "Note : We help you to Grow your Business" %}</small></div>
+                    <div class="top-link">
+                        <a href="" class="bg-light nav-fill btn btn-sm-square rounded-circle"><i class="fab fa-facebook-f text-primary"></i></a>
+                        <a href="" class="bg-light nav-fill btn btn-sm-square rounded-circle"><i class="fab fa-twitter text-primary"></i></a>
+                        <a href="" class="bg-light nav-fill btn btn-sm-square rounded-circle"><i class="fab fa-instagram text-primary"></i></a>
+                        <a href="" class="bg-light nav-fill btn btn-sm-square rounded-circle me-0"><i class="fab fa-linkedin-in text-primary"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Topbar End -->
+
+        <!-- Navbar Start -->
+         <!-- add sticky position of th navbar -->
+        <div class="container-fluid bg-primary sticky-top">
+            <div class="container">
+                <nav class="navbar navbar-dark navbar-expand-lg py-0">
+                    <a href="index.html" class="navbar-brand">
+                        <h1 class="text-white fw-bold d-block">Aurèle<span class="text-secondary">-Service</span> </h1>
+                    </a>
+                    <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse bg-transparent" id="navbarCollapse">
+                        <div class="navbar-nav ms-auto mx-xl-auto p-0">
+                            <a href="{% url 'home' %}" class="nav-item nav-link active text-secondary">{% trans 'Home' %}</a>
+                            <a href="{% url 'about' %}" class="nav-item nav-link">{% trans 'About Us' %}</a>
+                            <a href="{% url 'service' %}" class="nav-item nav-link">{% trans 'Services' %}</a>
+                            <a href="{% url 'project' %}" class="nav-item nav-link">{% trans 'Projects' %}</a>
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">{% trans 'Our Services' %}</a>
+                                <div class="dropdown-menu rounded">
+                                    <a href="{% url 'blog' %}" class="dropdown-item">{% trans 'Our Blog' %}</a>
+                                    <a href="{% url 'team' %}" class="dropdown-item">{% trans 'Our Team' %}</a>
+                                    <a href="{% url 'testimonial' %}" class="dropdown-item">{% trans 'Testimonial' %}</a>
+                                    <a href="404.html" class="dropdown-item">404 Page</a>
+                                    <a href="{% url 'contact' %}" class="dropdown-item">{% trans 'Contact' %}</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- drop down btn -->
+                         <!-- drop down btn -->
+                        <div class="dropdown">
+                            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Language
+                            </button>
+                            <ul class="dropdown-menu">
+                                {% get_current_language as CURRENT_LANGUAGE %}
+                                {% get_available_languages as AVAILABLE_LANGUAGES %}
+                                {% get_language_info_list for AVAILABLE_LANGUAGES as languages %}
+
+                                {% for language in languages %}
+                                    <li>
+                                        <a class="dropdown-item {% if language.code == CURRENT_LANGUAGE %}active{% endif %}" href="{% if language.code == 'en' %}/{% else %}/{{ language.code }}/{% endif %}">{{ language.name_local }}</a>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="d-none d-xl-flex flex-shirink-0">
+                        <div id="phone-tada" class="d-flex align-items-center justify-content-center me-4">
+                            <a href="{% url 'contact' %}" class="position-relative animated tada infinite">
+                                <i class="fa fa-phone-alt text-white fa-2x"></i>
+                                <div class="position-absolute" style="top: -7px; left: 20px;">
+                                    <span><i class="fa fa-comment-dots text-secondary"></i></span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- Navbar End -->
+</body>
+</html>

@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+<!-- content -->
+{% block content %}
+
+        
+        <!-- Page Header Start for project-->
+        <div class="container-fluid page-header py-5">
+            <div class="container text-center py-5">
+                <h1 class="display-2 text-white mb-4 animated slideInDown">{% trans 'Project Details' %}</h1>
+                <nav aria-label="breadcrumb animated slideInDown">
+                    <ol class="breadcrumb justify-content-center mb-0">
+                        <li class="breadcrumb-item"><a href="#">{% trans 'Home' %}</a></li>
+                        <li class="breadcrumb-item"><a href="#">{% trans 'Pages' %}</a></li>
+                        <li class="breadcrumb-item" aria-current="page">{% trans 'Project Details' %}</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <!-- Page Header End -->
+        <!-- Project Details Start -->
+        <div class="container-fluid project-details py-5 my-5">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-lg-6 wow fadeIn" data-wow-delay=".3s">
+                        <img src="{% static 'img/project-1.jpg' %}" class="img-fluid w-100 rounded mb-4" alt="">
+                        <img src="{% static 'img/project-2.jpg' %}" class="img-fluid w-100 rounded" alt="">
+                    </div>
+                    <div class="col-lg-6 wow fadeIn" data-wow-delay=".5s">
+                        <h5 class="text-primary">{% trans 'Project Details' %}</h5>
+                        <h1 class="mb-4">Project Management Solution</h1>
+                        <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur quis purus ut interdum. Pellentesque aliquam dolor eget urna ultricies tincidunt. Nam volutpat libero sit amet leo cursus, ac viverra eros tristique. Morbi quis quam mi. Cras vel gravida eros. Proin scelerisque quam nec elementum viverra. Suspendisse viverra hendrerit diam in tempus.</p>
+                        <p class="mb-4">Pellentesque aliquam dolor eget urna ultricies tincidunt. Nam volutpat libero sit amet leo cursus, ac viverra eros tristique. Morbi quis quam mi. Cras vel gravida eros. Proin scelerisque quam nec elementum viverra. Suspendisse viverra hendrerit diam in tempus.</p>
+                        <ul class="list-inline mb-4">
+                            <li><i class="fas fa-check text-primary me-2"></i>Project Management</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Business Analysis</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Risk Management</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Quality Management</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Scheduling</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Cost Management</li>
+                        </ul>
+                        <a href="" class="btn btn-secondary rounded-pill px-5 py-3 text-white">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Project Details End -->
+{% endblock %}
