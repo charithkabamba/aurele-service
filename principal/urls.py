@@ -22,7 +22,7 @@ from django.conf.urls.i18n import i18n_patterns
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = i18n_patterns( 
-    path('admin/', admin.site.urls),
+    path('aurele1/', admin.site.urls),
     path('', include('management.urls')),
     path('profession/', include('profession.urls')),
     path('i18n/', include('django.conf.urls.i18n')),  # for language switching
