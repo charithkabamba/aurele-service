@@ -91,9 +91,6 @@ INSTALLED_APPS = [
     'parler',
     'rosetta',
 
-    # 'whitenoise.runserver_nostatic',  # to disable Django's static file handling during development
-    "whitenoise.runserver_nostatic",
-    "django.contrib.staticfiles",
 ]
 
 MIDDLEWARE = [
@@ -213,7 +210,7 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
-STATIC_ROOT = BASE_DIR / "staticfiles"
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Extra places for collectstatic to find static files.
 STORAGES = {
