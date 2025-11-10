@@ -90,10 +90,17 @@ INSTALLED_APPS = [
 
     'parler',
     'rosetta',
+
+    # 'whitenoise.runserver_nostatic',  # to disable Django's static file handling during development
+    "whitenoise.runserver_nostatic",
+    "django.contrib.staticfiles",
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    # whitenoise middleware should be placed after security middleware
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+    # whitenoise middleware should be placed after security middleware
     'django.contrib.sessions.middleware.SessionMiddleware',
     # locale middleware should be after session middleware and before common middleware
     'django.middleware.locale.LocaleMiddleware',
@@ -206,7 +213,15 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
+STATIC_ROOT = BASE_DIR / "staticfiles"
 
+# Extra places for collectstatic to find static files.
+STORAGES = {
+    # ...
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+    },
+}
 MEDIA_URL = 'media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
