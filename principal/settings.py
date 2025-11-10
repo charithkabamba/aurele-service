@@ -142,11 +142,12 @@ WSGI_APPLICATION = 'principal.wsgi.application'
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
+#POSTGRESQL DATABASE
 DATABASES = {
     'default': dj_database_url.config(
-        default=config('DATABASE_URL'))
+        default=config('DATABASE_URL')
+    )
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
