@@ -43,8 +43,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Take environment variables from .env file
 environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 
-SECRET_KEY = env('SECRET_KEY')
-SECRET_KEY = config('SECRET_KEY')
+# SECRET_KEY = env('SECRET_KEY')
+# #DEFAULT SECRETE_KEY FOR DEV PURPOSES ONLY, REPLACE IN PRODUCTION
+
+SECRET_KEY = 'django-insecure-#e^al=!jmx1ezys5zz=v-iy$t7fl=zton576fheo&w2b1l=ghh'
+# SECRET_KEY
+# SECRET_KEY = config('SECRET_KEY')
 
 # caches
 # CACHES = {
