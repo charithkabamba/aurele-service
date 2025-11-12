@@ -65,16 +65,16 @@ CACHES = {
     # read os.environ['REDIS_URL']
     'redis': env.cache_url('REDIS_URL')
 }
-# CACHES = {
-#     "default": {
-#         "BACKEND": "django_redis.cache.RedisCache",
-#         "LOCATION": "redis://127.0.0.1:6379/1",  # Redis server location and database
-#         "OPTIONS": {
-#             "CLIENT_CLASS": "django_redis.client.DefaultClient",
-#             "SERIALIZER": "django_redis.serializers.JSONSerializer", # Example: using JSON serializer
-#         }
-#     }
-# }
+CACHES = {
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://127.0.0.1:6379/1",  # Redis server location and database
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+            "SERIALIZER": "django_redis.serializers.JSONSerializer", # Example: using JSON serializer
+        }
+    }
+}
 CACHES = {
     'default': env.cache('CACHE_URL', default='locmemcache://'),
 }
