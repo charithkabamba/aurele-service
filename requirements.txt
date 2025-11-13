@@ -14,7 +14,6 @@ packaging==25.0
 pillow==12.0.0
 polib==1.2.0
 psycopg2==2.9.11
-redis==7.0.1
 requests==2.25.1
 sqlparse==0.5.3
 tzdata==2025.2
