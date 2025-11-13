@@ -50,33 +50,10 @@ SECRET_KEY = 'django-insecure-#e^al=!jmx1ezys5zz=v-iy$t7fl=zton576fheo&w2b1l=ghh
 # SECRET_KEY
 # SECRET_KEY = config('SECRET_KEY')
 
-# caches
-# CACHES = {
-#     'default': env.cache(),
-# }
-
 CACHES = {
-    # Read os.environ['CACHE_URL'] and raises
-    # ImproperlyConfigured exception if not found.
-    #
-    # The cache() method is an alias for cache_url().
-    'default': env.cache(),
-
-    # read os.environ['REDIS_URL']
-    'redis': env.cache_url('REDIS_URL')
-}
-CACHES = {
-    "default": {
-        "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": "redis://127.0.0.1:6379/1",  # Redis server location and database
-        "OPTIONS": {
-            "CLIENT_CLASS": "django_redis.client.DefaultClient",
-            "SERIALIZER": "django_redis.serializers.JSONSerializer", # Example: using JSON serializer
-        }
+    'default': {
+        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
     }
-}
-CACHES = {
-    'default': env.cache('CACHE_URL', default='locmemcache://'),
 }
 
 ALLOWED_HOSTS = ['*']
