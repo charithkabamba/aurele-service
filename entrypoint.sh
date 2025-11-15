@@ -3,8 +3,8 @@
 set -e
 # lancer le serveur
 
-source /env/bin/activate
-python manage.py makemigration
+source /app/venv/bin/activate
+python manage.py makemigrations
 python manage.py migrate
 
 if [ "$DJANGO_ENV" = "production" ]; then
