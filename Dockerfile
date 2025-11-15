@@ -8,19 +8,19 @@ RUN mkdir /app
 
 WORKDIR /app
 
-COPY . /app/
-
 RUN python -m venv venv
 
-ENV PATH="/env/bin/:$PATH"
+ENV PATH="/app/venv/bin:$PATH"
+
+COPY requirements.txt /app/
+
+RUN pip install --upgrade pip
+
+RUN pip install -r requirements.txt
+
+COPY . /app/
 
 COPY entrypoint.sh /app/entrypoint.sh
 
 # ajouter fichier shell
-
-RUN python -m pip install --upgrade pip
-
-COPY requirements.txt /app/
-
-RUN pip install -r requirements.txt
 
