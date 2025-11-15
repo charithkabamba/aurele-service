@@ -7,4 +7,4 @@ services:
 
     ports:
       - "8000:8000"
-    entrypoint: /app/entrypoint.sh
+    entrypoint: /app/entrypoint.sh gunicorn -c /app/gunicorn.conf.py principal.wsgi:application
