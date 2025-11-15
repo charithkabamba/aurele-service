@@ -13,7 +13,7 @@ idna==2.10
 packaging==25.0
 pillow==12.0.0
 polib==1.2.0
-psycopg2==2.9.11
+psycopg2-binary==2.9.11
 requests==2.25.1
 sqlparse==0.5.3
 tzdata==2025.2
