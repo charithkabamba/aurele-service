@@ -1,0 +1,3 @@
+- [x] Edit docker-compose.yml to set build: .
+- [x] Edit Dockerfile to change pip install to use requirements.txt
+- [x] Run docker compose build to verify the fix (validation passed, but Docker daemon not running)
