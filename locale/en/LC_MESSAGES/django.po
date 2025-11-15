@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-25 13:02+0200\n"
+"POT-Creation-Date: 2025-11-15 04:04+0200\n"
 "PO-Revision-Date: 2025-10-25 12:32+0000\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,15 +19,15 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Translated-Using: django-rosetta 0.9.9\n"
 
-#: .\principal\settings.py:123
+#: .\principal\settings.py:161
 msgid "English"
 msgstr "English"
 
-#: .\principal\settings.py:124
+#: .\principal\settings.py:162
 msgid "French"
 msgstr "French"
 
-#: .\principal\settings.py:125
+#: .\principal\settings.py:163
 msgid "Simplified Chinese"
 msgstr "Simplified Chinese"
 
@@ -43,7 +43,7 @@ msgstr "About us"
 msgid "Contact us"
 msgstr "Contact us"
 
-#: .\templates\base\footer.html:31 .\templates\base\header.html:54
+#: .\templates\base\footer.html:31 .\templates\base\header.html:55
 #: .\templates\pages\service.html:62
 msgid "Our Services"
 msgstr "Our Services"
@@ -76,7 +76,7 @@ msgstr "Helps"
 msgid "FQAs"
 msgstr "FQAs"
 
-#: .\templates\base\footer.html:43 .\templates\base\header.html:60
+#: .\templates\base\footer.html:43 .\templates\base\header.html:61
 msgid "Contact"
 msgstr "Contact"
 
@@ -88,49 +88,52 @@ msgstr "Contact Us"
 msgid "Note : We help you to Grow your Business"
 msgstr "Note : We help you to Grow your Business"
 
-#: .\templates\base\header.html:49 .\templates\pages\about.html:15
-#: .\templates\pages\blog.html:14 .\templates\pages\project.html:12
-#: .\templates\pages\service.html:14 .\templates\pages\testimonial.html:13
+#: .\templates\base\header.html:50 .\templates\pages\about.html:15
+#: .\templates\pages\blog.html:14 .\templates\pages\project-details.html:14
+#: .\templates\pages\project.html:12 .\templates\pages\service.html:14
+#: .\templates\pages\service_detail.html:14
+#: .\templates\pages\testimonial.html:13
 msgid "Home"
 msgstr "Home"
 
-#: .\templates\base\header.html:50 .\templates\pages\about.html:12
-#: .\templates\pages\about.html:72
+#: .\templates\base\header.html:51 .\templates\pages\about.html:12
+#: .\templates\pages\about.html:73
 msgid "About Us"
 msgstr "About Us"
 
-#: .\templates\base\header.html:51 .\templates\pages\service.html:11
+#: .\templates\base\header.html:52 .\templates\pages\service.html:11
 #: .\templates\pages\service.html:16
 msgid "Services"
 msgstr "Services"
 
-#: .\templates\base\header.html:52 .\templates\pages\project.html:9
+#: .\templates\base\header.html:53 .\templates\pages\project.html:9
 #: .\templates\pages\project.html:14
 msgid "Projects"
 msgstr "Projects"
 
-#: .\templates\base\header.html:56 .\templates\pages\blog.html:11
+#: .\templates\base\header.html:57 .\templates\pages\blog.html:11
 #: .\templates\pages\blog.html:62
 msgid "Our Blog"
 msgstr "Our Blog"
 
-#: .\templates\base\header.html:57 .\templates\pages\about.html:88
+#: .\templates\base\header.html:58 .\templates\pages\about.html:92
 #: .\templates\pages\team.html:61
 msgid "Our Team"
 msgstr "Our Team"
 
-#: .\templates\base\header.html:58 .\templates\pages\testimonial.html:10
+#: .\templates\base\header.html:59 .\templates\pages\testimonial.html:10
 #: .\templates\pages\testimonial.html:15
 msgid "Testimonial"
 msgstr "Testimonial"
 
 #: .\templates\pages\about.html:16 .\templates\pages\blog.html:15
-#: .\templates\pages\project.html:13 .\templates\pages\service.html:15
+#: .\templates\pages\project-details.html:15 .\templates\pages\project.html:13
+#: .\templates\pages\service.html:15 .\templates\pages\service_detail.html:15
 #: .\templates\pages\testimonial.html:14
 msgid "Pages"
 msgstr "Pages"
 
-#: .\templates\pages\about.html:89 .\templates\pages\team.html:62
+#: .\templates\pages\about.html:93 .\templates\pages\team.html:62
 msgid "Meet our expert Team"
 msgstr "Meet our expert Team"
 
@@ -145,6 +148,14 @@ msgstr "Our Blog"
 #| msgid "Latest Blog"
 msgid "Latest Blog & News"
 msgstr "Latest Blog"
+
+#: .\templates\pages\project-details.html:11
+#: .\templates\pages\project-details.html:16
+#: .\templates\pages\project-details.html:31
+#, fuzzy
+#| msgid "Projects"
+msgid "Project Details"
+msgstr "Projects"
 
 #: .\templates\pages\project.html:60
 msgid "Our Project"
