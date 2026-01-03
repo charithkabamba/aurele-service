@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}ESG - LCS{% endblock %}
+{% block content %}
+<!-- Header Start -->
+<div class="container-fluid bg-breadcrumb">
+    <div class="container text-center py-5" style="max-width: 900px">
+        <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">
+            Our Activities
+        </h4>
+        <ol class="breadcrumb d-flex justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
+            <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+            <li class="breadcrumb-item"><a href="#">Activities</a></li>
+            <li class="breadcrumb-item active text-primary">ESG</li>
+        </ol>
+    </div>
+</div>
+<!-- Header End -->
+<!-- ESG Start -->
+<div class="container-fluid esg py-5">
+    <div class="container py-5">
+        <div class="d-flex flex-column mx-auto text-center mb-5 wow fadeInUp" data-wow-delay="0.2s"
+            style="max-width: 800px">
+            <h4 class="text-primary">Our Activities</h4>
+            <h1 class="display-4 mb-4">Environmental, Social, and Governance (ESG)</h1>
+            <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem,
+                deserunt provident ab voluptates rerum eaque eum magni autem atque in
+                minus laboriosam corrupti deleniti voluptatibus rem reiciendis modi
+                veniam animi?</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="esg-item">
+                    <div class="esg-img">
+                        <img src="{% static 'assets/img/esg.jpg' %}" class="img-fluid w-100" alt="" />
+                    </div>
+                    <div class="esg-content bg-light p-4">
+                        <h3 class="mb-4">Understanding ESG: A Comprehensive Overview</h3>
+                        <p class="mb-4">
+                            ESG stands for Environmental, Social, and Governance. It is a set of criteria used to
+                            evaluate a company's operations and performance in these three key areas. ESG considerations
+                            have become increasingly important for investors, consumers, and stakeholders who seek to
+                            support businesses that prioritize sustainability, social responsibility, and ethical
+                            governance.
+                        </p>
+                        <h4 class="mb-3">Environmental Criteria</h4>
+                        <p class="mb-4">
+                            Environmental criteria assess a company's impact on the planet. This includes factors such
+                            as carbon emissions, energy efficiency, waste management, water usage, and efforts to combat
+                            climate change. Companies that prioritize environmental sustainability often implement green
+                            initiatives and adopt eco-friendly practices.
+                        </p>
+                        <h4 class="mb-3">Social Criteria</h4>
+                        <p class="mb-4">
+                            Social criteria focus on a company's relationships with its employees, customers, suppliers,
+                            and communities. This includes issues such as labor practices, diversity and inclusion,
+                            human rights, community engagement, and customer satisfaction. Companies
+                            that prioritize social responsibility often invest in employee well-being and contribute
+                            positively to the communities they operate in.
+                        </p>
+                        <h4 class="mb-3">Governance Criteria</h4>
+                        <p class="mb-4">
+                            Governance criteria evaluate a company's leadership, board structure, executive
+                            compensation, transparency, and ethical conduct. Good governance practices ensure that a
+                            company is managed in the best interests of its shareholders and stakeholders. This includes
+                            having independent board members, clear policies on conflicts of interest, and robust risk
+                            management practices.
+                        </p>
+                        <p class="mb-4">
+                            In summary, ESG is a holistic approach to evaluating a company's performance beyond
+                            traditional financial metrics. By considering environmental, social, and governance factors,
+                            investors and stakeholders can make more informed decisions that align with their values and
+                            contribute to a more sustainable and equitable future.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ESG End -->
+{% endblock %}

@@ -1,0 +1,252 @@
+{% extends "base.html" %}
+
+{% load static %}
+<!-- language -->
+<!-- title block -->
+{% block title %}About Us - LCS{% endblock %}
+<!-- content block -->
+{% block content %}
+
+<!-- Header Start -->
+<div class="container-fluid bg-breadcrumb">
+  <div class="container text-center py-5" style="max-width: 900px">
+    <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">
+      About Us
+    </h4>
+    <ol class="breadcrumb d-flex justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
+      <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+      <li class="breadcrumb-item"><a href="#">Pages</a></li>
+      <li class="breadcrumb-item active text-primary">About</li>
+    </ol>
+  </div>
+</div>
+<!-- Header End -->
+<!-- company profile, mission, technique, capacity, vision, values, first value-6 -->
+
+
+
+<!-- About Start -->
+<div class="container-fluid about py-5">
+  <div class="container py-5">
+    <div class="row g-5">
+      <div class="col-lg-7 wow fadeInLeft" data-wow-delay="0.2s">
+        <div class="h-100">
+          <h4 class="text-primary">About Us</h4>
+          <h1 class="display-4 mb-4">
+            Providing you with the highest quality of features
+          </h1>
+          <div class="row g-4 mb-4">
+            <div class="col-md-6">
+              <a href="#" class="d-flex">
+                <span class="fas fa-bolt fa-3x me-3"></span>
+                <h4 class="mb-0">Smelting Power Solution</h4>
+              </a>
+            </div>
+            <div class="col-md-6">
+              <a href="#" class="d-flex">
+                <span class="fas fa-broadcast-tower fa-3x me-3"></span>
+                <h4 class="mb-0">Full-Service smelting Layout</h4>
+              </a>
+            </div>
+          </div>
+          <p class="mb-4">
+            At Lualaba Copper Smelter, we are dedicated to providing top-notch
+            smelting services that meet the highest industry standards. With over 6 years of
+            experience, our team of experts is committed to delivering efficient, reliable,
+            and sustainable solutions tailored to the unique needs of our clients
+          </p>
+          <div class="text-dark mb-4">
+            <p class="fs-5">
+              <span class="fa fa-check text-primary me-2"></span> Installed,
+              maintained and repaired lighting for clients.
+            </p>
+            <p class="fs-5">
+              <span class="fa fa-check text-primary me-2"></span> Increasingly
+              popular way to generate electricity.
+            </p>
+            <p class="fs-5">
+              <span class="fa fa-check text-primary me-2"></span> Protect
+              electrical devices from damage.
+            </p>
+          </div>
+          <a class="btn btn-primary py-3 px-4 px-md-5 ms-2" href="{% url 'contact' %}">Contact us</a>
+        </div>
+      </div>
+      <div class="col-lg-5 wow fadeInRight" data-wow-delay="0.2s">
+        <div class="position-relative h-100">
+          <img src="{% static 'assets/img/about-1.jpg' %}" class="img-fluid w-100 h-100" style="object-fit: cover"
+            alt="" />
+          <div class="bg-white">
+            <div class="position-absolute pt-3 bg-white" style="width: 50%; left: 0; bottom: 0">
+              <div class="bg-primary p-4">
+                <h4 class="display-2 mb-0">6+</h4>
+                <p class="text-white fs-5 mb-0">years of experience</p>
+              </div>
+            </div>
+            <div class="position-absolute p-3 bg-white pb-0 pe-0" style="width: 50%; bottom: 0; right: 0">
+              <img src="{% static 'assets/img/about-2.jpg' %}" class="img-fluid" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- About End -->
+<div class="container-fluid company-profile py-5">
+  <div class="container py-5">
+    <div class="row g-4">
+      <!-- company profile -->
+      <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+        <div class="company-profile-item text-center p-4">
+          <img src="{% static 'assets/img/company-1.jpg' %}" class="img-fluid w-100 mb-4" alt="" />
+          <h4 class="mb-3">Company Profile</h4>
+          <p>
+            We are a leading electrical services company dedicated to
+            delivering top-notch solutions for residential, commercial, and
+            industrial clients.
+          </p>
+        </div>
+      </div>
+      <!-- mission -->
+      <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+        <div class="company-profile-item text-center p-4">
+          <img src="{% static 'assets/img/company-3.jpg' %}" class="img-fluid w-100 mb-4" alt="" />
+          <h4 class="mb-3">Our Mission</h4>
+          <p>
+            To provide reliable, efficient, and innovative electrical
+            solutions that exceed our clients' expectations while
+            prioritizing safety and sustainability.
+          </p>
+        </div>
+      </div>
+      <!-- technique -->
+      <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+        <div class="company-profile-item text-center p-4">
+          <img src="{% static 'assets/img/company-4.jpg' %}" class="img-fluid w-100 mb-4" alt="" />
+          <h4 class="mb-3">Our Technique</h4>
+          <p>
+            We employ cutting-edge technology and industry best practices
+            to ensure the highest quality workmanship and efficient project
+            execution.
+          </p>
+        </div>
+      </div>
+      <!-- capacity -->
+      <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+        <div class="company-profile-item text-center p-4">
+          <img src="{% static 'assets/img/company-5.jpg' %}" class="img-fluid w-100 mb-4" alt="" />
+          <h4 class="mb-3">Our Capacity</h4>
+          <p>
+            With a team of skilled professionals and state-of-the-art
+            equipment, we have the capacity to handle projects of all
+            sizes and complexities.
+          </p>
+        </div>
+      </div>
+      <!-- vision -->
+      <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+        <div class="company-profile-item text-center p-4">
+          <img src="{% static 'assets/img/company-6.jpg' %}" class="img-fluid w-100 mb-4" alt="" />
+          <h4 class="mb-3">Our Vision</h4>
+          <p>
+            To be the most trusted and respected electrical services
+            provider, known for our commitment to excellence, innovation,
+            and customer satisfaction.
+          </p>
+        </div>
+      </div>
+      <!-- our values -->
+      <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+        <div class="company-profile-item text-center p-4">
+          <img src="{% static 'assets/img/company-2.jpg' %}" class="img-fluid w-100 mb-4" alt="" />
+          <h4 class="mb-3">Our Values</h4>
+          <p>
+            Integrity, Excellence, Innovation, Customer Focus, Safety, and
+            Sustainability are the core values that drive our company
+            forward.
+          </p>
+        </div>
+      </div>
+      <!-- others values can be added here -->
+      <!-- our values are as title-->
+      <div class="col-12 text-center mb-4 wow fadeInUp" data-wow-delay="0.2s">
+        <h1 class="display-4">Our Values</h1>
+      </div>
+
+
+      <!-- first value -->
+      <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+        <div class="company-profile-item text-center p-4">
+          <img src="{% static 'assets/img/company-7.jpg' %}" class="img-fluid w-100 mb-4" alt="" />
+          <h4 class="mb-3">Integrity</h4>
+          <p>
+            We uphold the highest standards of honesty and ethical conduct
+            in all our dealings.
+          </p>
+        </div>
+      </div>
+      <!-- second value -->
+      <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+        <div class="company-profile-item text-center p-4">
+          <img src="{% static 'assets/img/company-8.jpg' %}" class="img-fluid w-100 mb-4" alt="" />
+          <h4 class="mb-3">Excellence</h4>
+          <p>
+            We strive for excellence in every aspect of our work, ensuring
+            the highest quality results.
+          </p>
+        </div>
+      </div>
+      <!-- third value -->
+      <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+        <div class="company-profile-item text-center p-4">
+          <img src="{% static 'assets/img/company-9.jpg' %}" class="img-fluid w-100 mb-4" alt="" />
+          <h4 class="mb-3">Innovation</h4>
+          <p>
+            We embrace innovation and continuously seek new ways to improve our
+            services and solutions.
+          </p>
+        </div>
+      </div>
+
+      <!-- fourth value -->
+      <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.8s">
+        <div class="company-profile-item text-center p-4">
+          <img src="{% static 'assets/img/company-10.jpg' %}" class="img-fluid w-100 mb-4" alt="" />
+          <h4 class="mb-3">Customer Focus</h4>
+          <p>
+            We prioritize our customers' needs and strive to deliver exceptional
+            service.
+          </p>
+        </div>
+      </div>
+      <!-- fifth value -->
+      <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="1s">
+        <div class="company-profile-item text-center p-4">
+          <img src="{% static 'assets/img/company-11.jpg' %}" class="img-fluid w-100 mb-4" alt="" />
+          <h4 class="mb-3">Safety</h4>
+          <p>
+            We are committed to maintaining a safe working environment for
+            our employees and clients.
+          </p>
+        </div>
+      </div>
+
+      <!-- sixth value -->
+      <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="1.2s">
+        <div class="company-profile-item text-center p-4">
+          <img src="{% static 'assets/img/company-12.jpg' %}" class="img-fluid w-100 mb-4" alt="" />
+          <h4 class="mb-3">Sustainability</h4>
+          <p>
+            We are committed to sustainable practices and environmental
+            responsibility in all our operations.
+          </p>
+        </div>
+      </div>
+      <!-- end values -->
+
+    </div>
+  </div>
+  <!-- end -->
+
+  {% endblock %}

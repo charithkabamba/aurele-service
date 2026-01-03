@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Offer - LCS{% endblock %}
+{% block content %}
+<!-- Header Start -->
+<div class="container-fluid bg-breadcrumb">
+    <div class="container text-center py-5" style="max-width: 900px">
+        <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">
+            Our Offer
+        </h4>
+        <ol class="breadcrumb d-flex justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
+            <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+            <li class="breadcrumb-item"><a href="#">Activities</a></li>
+            <li class="breadcrumb-item active text-primary">Offer</li>
+        </ol>
+    </div>
+</div>
+<!-- Header End -->
+<!-- Offer Start -->
+<div class="container-fluid offer py-5">
+    <div class="container py-5">
+        <div class="d-flex flex-column mx-auto text-center mb-5 wow fadeInUp" data-wow-delay="0.2s"
+            style="max-width: 800px">
+            <h4 class="text-primary">Our Activities</h4>
+            <h1 class="display-4 mb-4">Special Offers Just for You</h1>
+            <p class="mb-0">Discover our exclusive offers and promotions designed to provide you with the best value on
+                our services. Don't miss out on these limited-time deals!</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="offer-item">
+                    <div class="offer-img">
+                        <img src="{% static 'assets/img/offer-1.jpg' %}" class="img-fluid w-100" alt="" />
+                    </div>
+                    <div class="offer-heading ms-4">
+                        <a href="#" class="h4 mb-0 p-4">Summer Savings on Energy Plans</a>
+                    </div>
+                    <div class="offer-content bg-light p-4">
+                        <div class="d-flex justify-content-between mb-4">
+                            <p class="mb-0 small">
+                                <i class="fa fa-calendar me-2"></i> Valid until June 30, 2024
+                            </p>
+                            <p class="mb-0 small">
+                                <i class="fa fa-tag me-2"></i> Energy Plans
+                            </p>
+                        </div>
+                        <p class="mb-4">
+                            Enjoy up to 20% off on our selected energy plans this summer. Switch now and start saving!
+                        </p>
+                        <a class="btn btn-primary py-2 px-4" href="#">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.4s">
+                <div class="offer-item">
+                    <div class="offer-img">
+                        <img src="{% static 'assets/img/offer-2.jpg' %}" class="img-fluid w-100" alt="" />
+                    </div>
+                    <div class="offer-heading ms-4">
+                        <a href="#" class="h4 mb-0 p-4">Free Energy Audit for New Customers</a>
+                    </div>
+                    <div class="offer-content bg-light p-4">
+                        <div class="d-flex justify-content-between mb-4">
+                            <p class="mb-0 small">
+                                <i class="fa fa-calendar me-2"></i> Valid until July 31, 2024
+                            </p>
+                            <p class="mb-0 small">
+                                <i class="fa fa-tag me-2"></i> Energy Audit
+                            </p>
+                        </div>
+                        <p class="mb-4">
+                            Sign up for our services and receive a complimentary energy audit to help you optimize your
+                            consumption.
+                        </p>
+                        <a class="btn btn-primary py-2 px-4" href="#">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.6s">
+                <div class="offer-item">
+                    <div class="offer-img">
+                        <img src="{% static 'assets/img/offer-3.jpg' %}" class="img-fluid w-100" alt="" />
+                    </div>
+                    <div class="offer-heading ms-4">
+                        <a href="#" class="h4 mb-0 p-4">Referral Bonus Program</a>
+                    </div>
+                    <div class="offer-content bg-light p-4">
+                        <div class="d-flex justify-content-between mb-4">
+                            <p class="mb-0 small>
+                                <i class=" fa fa-calendar me-2"></i> Ongoing
+                            </p>
+                            <p class="mb-0 small>
+                                <i class=" fa fa-tag me-2"></i> Referrals
+                            </p>
+                        </div>
+                        <p class="mb-4">
+                            Refer a friend to our services and earn rewards for each successful sign-up. Start sharing
+                            today!
+                        </p>
+                        <a class="btn btn-primary py-2 px-4" href="#">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Offer End -->
+{% endblock %}

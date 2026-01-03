@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block title %}{{ project.title }} - Projects{% endblock %}
+{% block content %}
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="display-4">{{ project.title }}</h1>
+            <p class="text-muted">{{ project.published_at|date:"F j, Y" }} — {{ project.category }}</p>
+            {% if project.image %}
+            <img src="{{ project.image.url }}" class="img-fluid mb-4" alt="{{ project.title }}">
+            {% endif %}
+            <div class="mb-4">
+                {{ project.content|safe }}
+            </div>
+            <a class="btn btn-outline-primary" href="{% url 'activite:project_list' %}">Back to Projects</a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

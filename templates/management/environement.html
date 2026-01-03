@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Offer - LCS{% endblock %}
+{% block content %}
+<!-- Header Start -->
+<div class="container-fluid bg-breadcrumb">
+    <div class="container text-center py-5" style="max-width: 900px">
+        <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">
+            Our Environment
+        </h4>
+        <ol class="breadcrumb d-flex justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
+            <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+            <li class="breadcrumb-item"><a href="#">Pages</a></li>
+            <li class="breadcrumb-item active text-primary">Environment</li>
+        </ol>
+    </div>
+</div>
+<!-- Header End -->
+<!-- Environment Start -->
+<div class="container-fluid environement py-5">
+    <div class="container py-5">
+        <div class="d-flex flex-column mx-auto text-center mb-5 wow fadeInUp" data-wow-delay="0.2s"
+            style="max-width: 800px">
+            <h4 class="text-primary">Our Environment</h4>
+            <h1 class="display-4 mb-4">Committed to Sustainable Smelting Practices</h1>
+            <p class="mb-0">
+                At Lualaba Copper Smelter, we are deeply committed to protecting the environment through
+                sustainable smelting practices. We continuously strive to minimize our environmental impact by
+                implementing eco-friendly technologies and adhering to stringent environmental regulations. Our goal is
+                to
+                ensure that our operations not only meet but exceed industry standards for environmental stewardship.
+            </p>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="environement-item">
+                    <div class="environement-img">
+                        <img src="{% static 'assets/img/environement-1.jpg' %}" class="img-fluid w-100" alt="" />
+                    </div>
+                    <div class="environement-content bg-light p-4">
+                        <h4 class="mb-4">Eco-Friendly Technologies</h4>
+                        <p class="mb-4">
+                            We invest in cutting-edge technologies that reduce emissions and waste,
+                            promoting a cleaner and healthier environment.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.4s">
+                <div class="environement-item">
+                    <div class="environement-img">
+                        <img src="{% static 'assets/img/environement-2.jpg' %}" class="img-fluid w-100" alt="" />
+                    </div>
+                    <div class="environement-content bg-light p-4">
+                        <h4 class="mb-4">Waste Management</h4>
+                        <p class="mb-4">
+                            Our comprehensive waste management strategies ensure that we minimize
+                            environmental impact while maximizing resource recovery.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.6s">
+                <div class="environement-item">
+                    <div class="environement-img">
+                        <img src="{% static 'assets/img/environement-3.jpg' %}" class="img-fluid w-100" alt="" />
+                    </div>
+                    <div class="environement-content bg-light p-4">
+                        <h4 class="mb-4">Community Engagement</h4>
+                        <p class="mb-4">
+                            We actively engage with local communities to promote environmental awareness
+                            and support sustainable development initiatives.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Environment End -->
+{% endblock %}

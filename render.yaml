@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: principal
+    env: python
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn principal.wsgi:application"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: postgresql-django
+          property: connectionString
+      - key: SECRET_KEY
+        generateValue: true
+      - key: WEB_CONCURRENCY
+        value: 4
+    healthCheckPath: /health/
+    autoDeploy: true
+    plan: free  # ou starter, standard
+
+databases:
+  - name: postgresql-django
+    plan: free  # ou starter, standard
