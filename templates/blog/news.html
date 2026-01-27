@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!-- Header Start -->
+<div class="container-fluid bg-breadcrumb">
+    <div class="container text-center py-5" style="max-width: 900px;">
+        <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">Our News & Blog</h4>
+        <ol class="breadcrumb d-flex justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item"><a href="#">Pages</a></li>
+            <li class="breadcrumb-item active text-secondary">News & Blog</li>
+        </ol>
+    </div>
+</div>
+<!-- Header End -->
+
+<!-- Blog Start -->
+<div class="container-fluid py-5">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-8">
+                <div class="row g-5">
+                    <div class="col-md-6">
+                        {% for new in news %}
+                        <div class="blog-item">
+                            <div class="blog-img">
+                                <img src="{{ new.image.url }}" alt="" class="img-fluid w-100" alt="">
+                            </div>
+                            <div class="blog-content p-4">
+                                <div class="d-flex justify-content-between mb-3">
+                                    <p class="mb-0"><i class="fa fa-calendar-check text-secondary me-1"></i>{{ new.date
+                                        }}</p>
+                                    <p class="mb-0"><i class="fa fa-user text-secondary me-1"></i> Admin</p>
+                                </div>
+                                <a href="#" class="h4 d-block mb-4">{{ new.title }}</a>
+                                <a class="btn btn-secondary py-2 px-4" href="#">Read More</a>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Blog End -->

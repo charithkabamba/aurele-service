@@ -1,11 +1,72 @@
 from django.db import models
 
 # Create your models here.
-class Service(models.Model):
-    name = models.CharField(max_length=100)
+
+class Carousel(models.Model):
+    title = models.CharField(max_length=200)
+    subtitle = models.CharField(max_length=500, blank=True)
     description = models.TextField()
-    image = models.ImageField(upload_to='services/')
-    price = models.DecimalField(max_digits=10, decimal_places=2)
+    image = models.ImageField(upload_to='carousel_images/')
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    is_active = models.BooleanField(default=True)
 
     def __str__(self):
-        return self.name
+        return self.title
+    
+    class Meta:
+        ordering = ['-created_at']
+    verbose_name = 'Carousel'
+    verbose_name_plural = 'Carousels'
+
+class Service(models.Model):
+    title = models.CharField(max_length=200)
+    description = models.TextField()
+    icon = models.CharField(max_length=100, blank=True, null=True)  # Check if this exist
+    image = models.ImageField(upload_to='service_images/', blank=True, null=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    is_active = models.BooleanField(default=True)
+
+    def __str__(self):
+        return self.title
+    
+    class Meta:
+        ordering = ['title']
+    verbose_name = 'Service'
+    verbose_name_plural = 'Services'
+
+
+class Message(models.Model):
+    name = models.CharField(max_length=100)
+    email = models.EmailField()
+    project = models.CharField(max_length=200, blank=True)
+    phone = models.CharField(max_length=20, blank=True)
+    subject = models.CharField(max_length=200)
+    body = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f'Message from {self.name} - {self.subject}'
+    
+    class Meta:
+        ordering = ['-created_at']
+    verbose_name = 'Message'
+    verbose_name_plural = 'Messages'
+
+
+class Project(models.Model):
+    title = models.CharField(max_length=200)
+    description = models.TextField()
+    image = models.ImageField(upload_to='project_images/', blank=True, null=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    is_active = models.BooleanField(default=True)
+
+    def __str__(self):
+        return self.title
+    
+    class Meta:
+        ordering = ['-created_at']
+    verbose_name = 'Project'
+    verbose_name_plural = 'Projects'
